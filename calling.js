@@ -9,15 +9,14 @@ const URL = PROTOCOL + "://" + IP + START_CALL;
 
 async function callNumber(number) {
 	for (var password of PASSWORDS) {
-        
         //Do I need to use URLSearchParams?
         //No.
         //But it makes everything easier to read.
         var params = new URLSearchParams()
         
-        params.add("phonenumber", number);
-        params.add("account", USERNAME);
-        params.add("password", password);
+        params.append("phonenumber", number);
+        params.append("account", USERNAME);
+        params.append("password", password);
 	    
         //Now for the moment we've all been waiting for! Send off the request!
 		var resp = await fetch(URL + "?" + params.toString(), {

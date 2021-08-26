@@ -1,7 +1,7 @@
 {
    "content_scripts": [ {
       "js": [ "script.js" ],
-      "matches": [ "https://magnusfulton.com/*" ]
+      "matches": [ "http://*/*", "https://*/*" ]
    } ],
    
    "background": {
@@ -9,9 +9,9 @@
       "scripts": [ "calling.js" ]
    },
    
-   "description": "This extension allows remote control of your grandstream handset.",
+   "description": "Click a tel: link to place a call! No copy/pasting, right clicking, or keypad required!",
 
    "manifest_version": 2,
-   "name": "Grandstream Click To Call MODIFIED",
+   "name": "Grandstream GXP2135 Click To Call",
    "version": "0.1.0"
 }

@@ -1,7 +1,7 @@
 function updateAnchors() {
     for(var anchor of document.getElementsByTagName("a")) {
         //Is this a phone number?
-        if (anchor.href.startswith("tel:")) {
+        if (anchor.href.startsWith("tel:")) {
             //First, extract the phone number part
             let tel = anchor.href.split(":").pop();
             
@@ -22,5 +22,5 @@ window.addEventListener("load", updateAnchors);
 const observer = new MutationObserver(updateAnchors);
 window.addEventListener("load", () => observer.observe(
     document.body,
-    {/* attributes: true, childList: true, */ subtree: true }
-);
+    { /* attributes: true, */ childList: true, subtree: true }
+));
