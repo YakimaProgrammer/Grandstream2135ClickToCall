@@ -8,7 +8,7 @@ const PASSWORDS = ["Admin", "admin"];
 const URL = PROTOCOL + "://" + IP + START_CALL;
 
 async function callNumber(number) {
-	for (var password of PASSWORDS) {
+    for (var password of PASSWORDS) {
         //Do I need to use URLSearchParams?
         //No.
         //But it makes everything easier to read.
@@ -19,16 +19,16 @@ async function callNumber(number) {
         params.append("password", password);
 	    
         //Now for the moment we've all been waiting for! Send off the request!
-		var resp = await fetch(URL + "?" + params.toString(), {
-			method: "GET",  
-			credentials: 'include', 
-			mode: 'no-cors'
-		});
+        var resp = await fetch(URL + "?" + params.toString(), {
+            method: "GET",  
+            credentials: 'include', 
+            mode: 'no-cors'
+        });
 		
-		if (resp.status === 200) {
-			break;
-		}
-	}
+        if (resp.status === 200) {
+            break;
+        }
+    }
 }
 
 //Listen for when the user clicks on a telephone number link

@@ -9,7 +9,7 @@
       "scripts": [ "calling.js" ]
    },
    
-   "description": "Click a tel: link to place a call! No copy/pasting, right clicking, or keypad required!",
+   "description": "Click a tel: link to place a call! No copy/pasting, right-clicking, or keypad required!",
 
    "manifest_version": 2,
    "name": "Grandstream GXP2135 Click To Call",
