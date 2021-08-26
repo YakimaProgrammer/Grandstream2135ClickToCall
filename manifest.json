@@ -1,0 +1,17 @@
+{
+   "content_scripts": [ {
+      "js": [ "script.js" ],
+      "matches": [ "https://magnusfulton.com/*" ]
+   } ],
+   
+   "background": {
+      "persistent": false,
+      "scripts": [ "calling.js" ]
+   },
+   
+   "description": "This extension allows remote control of your grandstream handset.",
+
+   "manifest_version": 2,
+   "name": "Grandstream Click To Call MODIFIED",
+   "version": "0.1.0"
+}
